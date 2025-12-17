@@ -1,0 +1,22 @@
+{
+  "rows": 4,
+  "columns": [
+    "name",
+    "age",
+    "city"
+  ],
+  "stats": {
+    "name": {
+      "non_empty": 4,
+      "unique": 4
+    },
+    "age": {
+      "non_empty": 4,
+      "unique": 4
+    },
+    "city": {
+      "non_empty": 4,
+      "unique": 4
+    }
+  }
+}

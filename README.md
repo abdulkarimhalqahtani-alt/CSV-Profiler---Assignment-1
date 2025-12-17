@@ -1,0 +1,29 @@
+# CSV Profiler
+
+A simple Python tool to analyze CSV files and generate basic statistics.
+
+## Features
+- Counts number of rows
+- Lists column names
+- Calculates basic statistics:
+  - Non-empty values per column
+  - Unique values per column
+- Generates output reports in JSON and Markdown formats
+
+## Project Structure
+csv-profiler/
+├── data/
+│   └── sample.csv
+├── outputs/
+│   ├── report.json
+│   └── report.md
+├── src/
+│   ├── main.py
+│   └── profiler.py
+├── README.md
+## How to Run
+
+Make sure you are in the project root directory, then run:
+
+```bash
+python src/main.py
