@@ -1,6 +1,8 @@
 # CSV Profiler
 
-A simple Python tool to analyze CSV files and generate basic statistics.
+A modular Python tool to analyze CSV files and generate basic statistics.
+This version reflects Assignment 2, where the code was refactored into a
+package with separated responsibilities.
 
 ## Features
 - Counts number of rows
@@ -18,11 +20,15 @@ csv-profiler/
 │   ├── report.json
 │   └── report.md
 ├── src/
-│   ├── main.py
-│   └── profiler.py
+│   ├── csv_profiler/
+│   │   ├── __init__.py
+│   │   ├── io.py
+│   │   ├── profile.py
+│   │   └── render.py
+│   └── main.py
 ├── README.md
-## How to Run
 
+## How to Run
 Make sure you are in the project root directory, then run:
 
 ```bash
