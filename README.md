@@ -29,12 +29,16 @@ csv-profiler/
 ├── README.md
 
 
-## How to Run
+## CLI Usage
 
-### 1. Create and activate virtual environment
+Activate the virtual environment:
 
-```bash
-python -m venv .venv
+.venv\Scripts\Activate.ps1
+
+Run the profiler:
+
+python src/main.py data/sample.csv --out outputs
+
 
 
 
