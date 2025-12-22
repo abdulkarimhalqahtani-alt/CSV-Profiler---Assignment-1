@@ -32,8 +32,9 @@ csv-profiler/
 ## How to Run
 
 ### 1. Create and activate virtual environment
+
 ```bash
 python -m venv .venv
-.venv\Scripts\activate
+
 
 
