@@ -28,8 +28,12 @@ csv-profiler/
 │   └── main.py
 ├── README.md
 
-## How to Run
-Make sure you are in the project root directory, then run:
 
+## How to Run
+
+### 1. Create and activate virtual environment
 ```bash
-python src/main.py
+python -m venv .venv
+.venv\Scripts\activate
+
+
