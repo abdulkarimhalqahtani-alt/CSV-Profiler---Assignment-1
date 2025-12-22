@@ -1,22 +1,33 @@
+import typer
 from csv_profiler.io import read_csv, write_json
 from csv_profiler.profile import profile_csv
 from csv_profiler.render import render_markdown
 
+app = typer.Typer()
 
-def main():
-    input_path = "data/sample.csv"
-    output_json = "outputs/report.json"
-    output_md = "outputs/report.md"
 
+@app.command()
+def main(
+    input_path: str,
+    out: str = "outputs"
+):
+    """
+    CSV Profiler CLI
+    """
     rows = read_csv(input_path)
     report = profile_csv(rows)
 
-    write_json(report, output_json)
+    json_path = f"{out}/report.json"
+    md_path = f"{out}/report.md"
+
+    write_json(report, json_path)
 
     md = render_markdown(report)
-    with open(output_md, "w", encoding="utf-8") as f:
+    with open(md_path, "w", encoding="utf-8") as f:
         f.write(md)
+
+    typer.echo("✅ Report generated successfully")
 
 
 if __name__ == "__main__":
-    main()
+    app()
